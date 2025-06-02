@@ -1,0 +1,80 @@
+body {
+  box-sizing: border-box;
+  background-color: #f0f0f0;
+  color: #222222;
+  font-family: "poppins", Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #222222;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #aeaeae;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+}
+
+header h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul li {
+  padding-left: 20px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+main {
+  width: 1200px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+}
+
+.hero {
+  display: contents;
+}
+
+.hero-image {
+  grid-column: span 6;
+  width: 100%;
+}
+
+.hero-text {
+  grid-column: 8 / span 5;
+}
+
+h3 {
+  font-size: 24px;
+  grid-column: span 12;
+  text-align: center;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.cards {
+  display: contents;
+}
+
+.card {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  grid-column: span 4;
+}
+
+h4 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.card p {
+  padding: 20px 0;
+}
