@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Webdevelopment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <script>
+      function showAlert() {
+        alert('Je hebt op de knop gedrukt!');
+      }
+      function updateTime() {
+        const tijd = new Date().toLocaleTimeString();
+        document.getElementById('tijd').textContent = tijd;
+      }
+      setInterval(updateTime, 1000);
+      function toggleFaq(id) {
+        const el = document.getElementById(id);
+        el.style.display = el.style.display === 'block' ? 'none' : 'block';
+      }
+    </script>
+</head>
+<body onload="updateTime()">
+    <header class="container">
+        <div class="row" style="align-items: center; margin-top: 32px;">
+            <div class="col-6">
+                <h1 class="logo">Webdevelopment</h1>
+            </div>
+            <nav class="col-6 nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="html.html">HTML</a></li>
+                    <li><a href="css.html">CSS</a></li>
+                    <li><a href="javascript.html">JavaScript</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <section class="row" style="margin-bottom: 32px;">
+            <div class="col-6 card">
+                <h3>Interactie</h3>
+                <button onclick="showAlert()" style="padding:12px 24px; background:#e94e77; color:#fff; border:none; border-radius:6px; font-size:1rem; cursor:pointer;">Klik op mij!</button>
+            </div>
+            <div class="col-6 card">
+                <h3>Huidige tijd</h3>
+                <p id="tijd" style="font-size:1.2rem; font-weight:600;">--:--:--</p>
+            </div>
+        </section>
+        <section class="row">
+            <div class="col-12 card">
+                <h3>FAQ</h3>
+                <div>
+                    <button onclick="toggleFaq('faq1')" style="background:none; border:none; color:#e94e77; font-weight:600; cursor:pointer;">Wat is JavaScript?</button>
+                    <div id="faq1" style="display:none; margin-bottom:12px;">JavaScript is een programmeertaal voor interactieve webpagina's.</div>
+                    <button onclick="toggleFaq('faq2')" style="background:none; border:none; color:#e94e77; font-weight:600; cursor:pointer;">Waarvoor gebruik je het?</button>
+                    <div id="faq2" style="display:none; margin-bottom:12px;">Voor dynamische content, validatie, animaties en meer.</div>
+                    <button onclick="toggleFaq('faq3')" style="background:none; border:none; color:#e94e77; font-weight:600; cursor:pointer;">Kan JavaScript ook op de server?</button>
+                    <div id="faq3" style="display:none;">Ja, met Node.js kun je JavaScript op de server draaien.</div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html> 
